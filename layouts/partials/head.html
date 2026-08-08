@@ -20,6 +20,7 @@
 <link rel="alternate icon" href="{{ "favicon.ico" | relURL }}" sizes="16x16 32x32 48x48 64x64">
 <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}" sizes="180x180">
 <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
+<link rel="preload" href="{{ "fonts/space-grotesk-variable.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
 {{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ .Permalink }}">{{ end }}
 {{ $style := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">

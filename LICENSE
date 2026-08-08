@@ -6,6 +6,9 @@ below. Editorial content in the `content/` directory and original brand assets
 in `static/` are Copyright (c) 2026 The Code Less Taken. They may not be reused
 without permission unless a file states otherwise.
 
+Space Grotesk font files in `static/fonts/` are distributed under the SIL Open
+Font License 1.1. See `static/fonts/OFL-Space-Grotesk.txt`.
+
 MIT License
 
 Copyright (c) 2026 The Code Less Taken
@@ -27,4 +30,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
