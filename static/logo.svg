@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 128" role="img" aria-labelledby="title description">
+  <title id="title">The Code Less Taken</title>
+  <desc id="description">A branching-path symbol beside the publication name.</desc>
+  <rect x="8" y="8" width="112" height="112" rx="20" fill="#171a19"/>
+  <rect x="24" y="32" width="36" height="14" fill="#e8e0ce"/>
+  <path d="M52 32h14v24h38v14H52z" fill="#e8e0ce"/>
+  <path d="M52 40h14v42h38v14H52z" fill="#f0a33a"/>
+  <rect x="96" y="78" width="18" height="22" fill="#f0a33a"/>
+  <g fill="#171a19" font-family="sans-serif">
+    <text x="148" y="45" font-size="24" font-weight="700" letter-spacing="5">THE CODE</text>
+    <text x="144" y="96" font-size="54" font-weight="800" letter-spacing="-2">LESS TAKEN</text>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+{{- $description := .Description | default site.Params.description -}}
+{{- $orgID := printf "%s#organization" site.BaseURL -}}
+{{- $websiteID := printf "%s#website" site.BaseURL -}}
+{{- $pageType := .Params.schema_type | default "WebPage" -}}
+{{- if .IsSection -}}{{- $pageType = "CollectionPage" -}}{{- end -}}
+{{- $organization := dict
+  "@type" "Organization"
+  "@id" $orgID
+  "name" site.Title
+  "url" site.BaseURL
+  "description" site.Params.description
+  "email" (printf "mailto:%s" site.Params.email)
+  "logo" (dict "@type" "ImageObject" "contentUrl" ("apple-touch-icon.png" | absURL) "width" 180 "height" 180)
+  "sameAs" (slice site.Params.github)
+  "publishingPrinciples" ("standards/editorial/" | absURL)
+  "contactPoint" (dict "@type" "ContactPoint" "contactType" "editorial correspondence" "email" site.Params.email)
+-}}
+{{- $website := dict
+  "@type" "WebSite"
+  "@id" $websiteID
+  "name" site.Title
+  "url" site.BaseURL
+  "description" site.Params.description
+  "inLanguage" "en-US"
+  "publisher" (dict "@id" $orgID)
+-}}
+{{- $webpage := dict
+  "@type" $pageType
+  "@id" (printf "%s#webpage" .Permalink)
+  "name" .Title
+  "url" .Permalink
+  "description" $description
+  "inLanguage" "en-US"
+  "isPartOf" (dict "@id" $websiteID)
+  "about" (dict "@type" "Thing" "name" "Alternative computing")
+  "publisher" (dict "@id" $orgID)
+-}}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice $organization $website $webpage) | jsonify | safeJS }}</script>

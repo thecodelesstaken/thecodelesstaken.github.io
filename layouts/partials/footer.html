@@ -1,0 +1,23 @@
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div>
+      <a class="footer-brand" href="{{ site.Home.RelPermalink }}">The Code Less Taken</a>
+      <p>Evidence-backed alternative computing for working engineers.</p>
+    </div>
+    <div>
+      <a class="footer-label" href="{{ "standards/" | relURL }}">Standards</a>
+      <a href="{{ "standards/editorial/" | relURL }}">Editorial method</a>
+      <a href="{{ "standards/corrections/" | relURL }}">Corrections</a>
+      <a href="{{ "standards/privacy/" | relURL }}">Privacy</a>
+    </div>
+    <div>
+      <p class="footer-label">Updates and contact</p>
+      <a href="{{ "feed.xml" | relURL }}">RSS feed</a>
+      <a href="{{ site.Params.github }}" rel="me">GitHub</a>
+      <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+    </div>
+  </div>
+  <div class="shell footer-base">
+    <span>&copy; {{ now.Year }} The Code Less Taken</span>
+  </div>
+</footer>

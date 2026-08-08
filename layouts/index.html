@@ -1,0 +1,44 @@
+{{ define "main" }}
+<section class="hero shell">
+  <div class="hero-copy">
+    <h1>The roads computing did not take.</h1>
+    <p class="hero-deck">Uncommon languages, forgotten systems, and alternative ideas can still sharpen how we build software. We examine how they worked, why they stayed outside the mainstream, and what remains useful now.</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="{{ "writing/" | relURL }}">Explore the writing</a>
+      <a class="button button-secondary" href="{{ "manifesto/" | relURL }}">Why this matters</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-section home-writing">
+  <div class="shell">
+    <div class="home-writing-intro">
+      <h2>What you’ll find here</h2>
+      <p>Technical history is most useful when it changes how you see a present problem. The writing connects overlooked ideas to current questions in security, coordination, reliability, programming environments, and tooling.</p>
+    </div>
+    <div class="writing-types">
+      <div>
+        <h3>Investigations</h3>
+        <p>Source-backed accounts of how a system worked, why it remained uncommon, and which of its trade-offs still matter.</p>
+      </div>
+      <div>
+        <h3>Field notes</h3>
+        <p>Shorter reports from reconstructed builds, unusual tools, important papers, protocols, and focused experiments.</p>
+      </div>
+      <div>
+        <h3>Working artifacts</h3>
+        <p>Runnable examples and documented environments for claims that can be tested, with limits and failures left visible.</p>
+      </div>
+    </div>
+    <p class="home-writing-link"><a href="{{ "writing/" | relURL }}">Browse all writing</a></p>
+  </div>
+</section>
+
+<section class="contact-band">
+  <div class="shell contact-inner">
+    <h2>Know something we should examine?</h2>
+    <p>Send primary material, build knowledge, practitioner accounts, or a specific correction.</p>
+    <a class="button button-primary" href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+  </div>
+</section>
+{{ end }}

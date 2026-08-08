@@ -1,0 +1,36 @@
+baseURL = "https://thecodelesstaken.com/"
+locale = "en-US"
+title = "The Code Less Taken"
+copyright = "The Code Less Taken"
+enableRobotsTXT = false
+enableGitInfo = false
+disableKinds = ["taxonomy", "term"]
+
+[pagination]
+  pagerSize = 12
+
+[params]
+  description = "Evidence-backed investigations of uncommon languages, forgotten systems, and alternative computing for working engineers."
+  email = "contact@thecodelesstaken.com"
+  tagline = "Uncommon languages, forgotten systems, and alternative ideas in computing."
+  github = "https://github.com/thecodelesstaken"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML"]
+
+[outputFormats.RSS]
+  mediaType = "application/rss+xml"
+  baseName = "feed"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+    guessSyntax = true
+
+[minify]
+  minifyOutput = true

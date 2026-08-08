@@ -1,0 +1,18 @@
+# Hugo output
+/public/
+/resources/_gen/
+/.hugo_build.lock
+/hugo_stats.json
+
+# Local tooling
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Performance reports
+/.lighthouseci/
+/lighthouse-report.*
+

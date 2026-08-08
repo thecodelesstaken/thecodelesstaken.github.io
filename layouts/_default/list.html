@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="section-page shell">
+  <header class="section-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="standfirst">{{ . }}</p>{{ end }}
+  </header>
+  {{ with .Content }}<div class="prose section-intro">{{ . }}</div>{{ end }}
+  {{ if .Pages }}
+  <div class="entry-list">
+    {{ range .Pages.ByDate.Reverse }}
+    <article class="entry">
+      <div class="entry-meta"><span>{{ .Params.format | default .Section | humanize }}</span>{{ with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2 Jan 2006" }}</time>{{ end }}</div>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    </article>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    {{ partial "header.html" . }}
+    <main id="main-content">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const button = document.querySelector("[data-theme-toggle]");
+        if (!button) return;
+        const label = button.querySelector("[data-theme-label]");
+        const names = { auto: "Auto", light: "Light", dark: "Dark" };
+        const modes = ["auto", "light", "dark"];
+        const current = () => root.dataset.theme || "auto";
+        const paint = () => {
+          const mode = current();
+          label.textContent = names[mode];
+          button.setAttribute("aria-label", `Color mode: ${names[mode]}. Change color mode.`);
+          button.dataset.mode = mode;
+        };
+        button.addEventListener("click", () => {
+          const next = modes[(modes.indexOf(current()) + 1) % modes.length];
+          if (next === "auto") {
+            delete root.dataset.theme;
+            localStorage.removeItem("theme");
+          } else {
+            root.dataset.theme = next;
+            localStorage.setItem("theme", next);
+          }
+          paint();
+        });
+        paint();
+      })();
+    </script>
+  </body>
+</html>
