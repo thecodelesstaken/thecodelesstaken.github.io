@@ -544,6 +544,7 @@ a {
 }
 
 .section-intro {
+  max-width: var(--narrow);
   margin-top: 3.5rem;
 }
 
@@ -588,6 +589,10 @@ a {
 .article {
   min-height: 65vh;
   padding-block: clamp(4.5rem, 9vw, 8rem);
+}
+
+.article .prose {
+  max-width: var(--narrow);
 }
 
 .article-date {
