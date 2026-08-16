@@ -12,7 +12,7 @@ disableKinds = ["taxonomy", "term"]
 [params]
   description = "Alternative computing, tested against present-day engineering problems."
   email = "contact@thecodelesstaken.com"
-  tagline = "Overlooked computing ideas examined for what engineers can use, question, or reject today."
+  tagline = "Practical lessons from overlooked languages, systems, and techniques."
   github = "https://github.com/thecodelesstaken"
 
 [outputs]

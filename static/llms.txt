@@ -2,7 +2,7 @@
 
 > Alternative computing, tested against present-day engineering problems.
 
-The Code Less Taken is an independent technical publication and experimental research studio. It examines overlooked languages, systems, and techniques to clarify current problems in software design, testing, debugging, security, operations, and maintenance.
+The Code Less Taken is an independent technical publication. It tests overlooked languages, systems, and techniques against current problems in building and operating software.
 
 Source notes, reconstructed environments, code, benchmarks, and extended results are linked separately when they materially support an argument.
 

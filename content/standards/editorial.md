@@ -4,11 +4,11 @@ description = "How The Code Less Taken chooses topics, supports claims, handles 
 aliases = ["/standards/"]
 +++
 
-Each post begins with a present-day engineering question and one overlooked mechanism. We publish when that mechanism produces a useful design lesson, technique, warning, diagnostic lens, or question for current work.
+Each post begins with a current engineering problem and one overlooked mechanism. We publish when the mechanism clarifies an engineering decision or provides a technique readers can test.
 
 ## Evidence
 
-Claims rely first on primary documentation, source code, papers, manuals, standards, recorded talks, and first-hand technical accounts. When implementation matters, we publish the relevant code, environment, versions, and limitations whenever practical.
+Claims rely on the closest available sources: original documentation and code, published research, standards, or first-hand technical accounts. When implementation matters, we publish the relevant code, environment, versions, and limitations whenever practical.
 
 ## Comparison and judgment
 

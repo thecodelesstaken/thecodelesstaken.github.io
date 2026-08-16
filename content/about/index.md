@@ -5,19 +5,19 @@ schema_type = "AboutPage"
 aliases = ["/manifesto/"]
 +++
 
-The Code Less Taken is an independent technical publication and experimental research studio. It examines overlooked languages, systems, and techniques to clarify current problems in software design, testing, debugging, security, operations, and maintenance.
+The Code Less Taken is an independent technical publication. It tests overlooked languages, systems, and techniques against current problems in building and operating software.
 
-Each post uses one alternative mechanism to examine a present-day engineering question. The conclusion may recommend the idea, limit it to specific conditions, or find that the mainstream approach is better. Detailed evidence is published separately when it supports the argument.
+Each post examines one engineering question through an alternative mechanism. It explains how the mechanism works, tests its trade-offs, and shows where it helps or fails. Supporting evidence is published separately when it affects the conclusion.
 
 ## Who it is for
 
-The primary readers are working engineers, technical leads, architects, researchers, specialist practitioners, and advanced learners. The publication also welcomes curious readers who want to understand how software can be designed differently. Prior knowledge of the subject is not required; unfamiliar terms are explained without flattening the mechanism.
+The primary readers are working engineers, technical leads, architects, researchers, and advanced learners. Curious readers who want to understand how software can be designed differently are also welcome. Prior knowledge of the subject is not required; unfamiliar terms are explained without flattening the mechanism.
 
 ## Editorial position
 
-Low adoption does not prove that an idea was technically inferior. Obscurity does not prove that it was secretly better, either. We examine technical limits alongside economics, standards, timing, tooling, and institutional support.
+We treat adoption as evidence about technical limits, economics, standards, timing, tooling, and institutional support. Adoption alone is not a verdict on every design choice.
 
-Software history preserves design choices that can still be examined. We use it as technical evidence, not as proof that earlier or less common systems were superior.
+Historical systems provide designs that can still be inspected and tested. We judge them by evidence rather than age or popularity.
 
 The publication does not accept editorial control from sponsors, members, vendors, or partners. Material relationships will be disclosed with the work they support.
 
