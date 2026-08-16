@@ -1,16 +1,11 @@
 # The Code Less Taken
 
-> Alternative computing, tested against present-day engineering problems.
-
-The Code Less Taken is an independent technical publication. It tests overlooked languages, systems, and techniques against current problems in building and operating software.
-
-Source notes, reconstructed environments, code, benchmarks, and extended results are linked separately when they materially support an argument.
+> Writing about overlooked languages, systems, and techniques.
 
 ## Core pages
 
-- [Writing](https://thecodelesstaken.com/writing/): Focused technical posts.
-- [About](https://thecodelesstaken.com/about/): Purpose, audience, and editorial position.
-- [Contact](https://thecodelesstaken.com/contact/): Sources, corrections, collaboration proposals, and correspondence.
+- [Home](https://thecodelesstaken.com/): Recent articles and contact information.
+- [Writing](https://thecodelesstaken.com/writing/): All published articles.
 
 ## Editorial standards
 

@@ -1,7 +1,6 @@
 +++
 title = "Editorial method"
 description = "How The Code Less Taken chooses topics, supports claims, handles uncertainty, and corrects errors."
-aliases = ["/standards/"]
 +++
 
 Each post begins with a current engineering problem and one overlooked mechanism. We publish when the mechanism clarifies an engineering decision or provides a technique readers can test.
