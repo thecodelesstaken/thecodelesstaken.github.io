@@ -1,6 +1,6 @@
 # The Code Less Taken
 
-The Hugo source for [thecodelesstaken.com](https://thecodelesstaken.com), an independent technical publication about uncommon languages, forgotten systems, and alternative computing.
+The Hugo source for [thecodelesstaken.com](https://thecodelesstaken.com), an independent technical publication that tests overlooked computing ideas against current engineering problems.
 
 ## Local development
 

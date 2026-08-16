@@ -1,7 +1,7 @@
 {
   "name": "The Code Less Taken",
   "short_name": "Code Less Taken",
-  "description": "Evidence-backed alternative computing for working engineers.",
+  "description": "Alternative computing, tested against present-day engineering problems.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f3efe4",
@@ -15,4 +15,3 @@
     }
   ]
 }
-

@@ -1,25 +1,26 @@
 # The Code Less Taken
 
-> Evidence-backed alternative computing for working engineers.
+> Alternative computing, tested against present-day engineering problems.
 
-The Code Less Taken is an independent technical publication about uncommon languages, forgotten systems, underused techniques, and alternative computing. Its work uses primary sources, reconstruction, and modern comparison to explain how an approach worked, why it remained uncommon, and what still transfers to current engineering.
+The Code Less Taken is an independent technical publication and experimental research studio. It examines overlooked languages, systems, and techniques to clarify current problems in software design, testing, debugging, security, operations, and maintenance.
+
+Source notes, reconstructed environments, code, benchmarks, and extended results are linked separately when they materially support an argument.
 
 ## Core pages
 
-- [Writing](https://thecodelesstaken.com/writing/): Long-form investigations, field notes, and working artifacts.
-- [Manifesto](https://thecodelesstaken.com/manifesto/): Why alternative computing remains a useful engineering resource.
+- [Writing](https://thecodelesstaken.com/writing/): Focused technical posts.
 - [About](https://thecodelesstaken.com/about/): Purpose, audience, and editorial position.
 - [Contact](https://thecodelesstaken.com/contact/): Sources, corrections, collaboration proposals, and correspondence.
 
 ## Editorial standards
 
-- [Editorial method](https://thecodelesstaken.com/standards/editorial/): Sourcing, reconstruction, comparison, review, and maintenance practices.
+- [Editorial method](https://thecodelesstaken.com/standards/editorial/): Topic selection, evidence, comparison, uncertainty, and corrections.
 - [Corrections policy](https://thecodelesstaken.com/standards/corrections/): How corrections are submitted, evaluated, and recorded.
 - [Privacy](https://thecodelesstaken.com/standards/privacy/): Site data and privacy practices.
 
 ## Feeds and discovery
 
-- [RSS feed](https://thecodelesstaken.com/feed.xml): New investigations and field notes.
+- [RSS feed](https://thecodelesstaken.com/feed.xml): New posts.
 - [XML sitemap](https://thecodelesstaken.com/sitemap.xml): Canonical public URLs.
 
 ## Contact
