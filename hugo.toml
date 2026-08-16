@@ -10,9 +10,9 @@ disableKinds = ["taxonomy", "term"]
   pagerSize = 12
 
 [params]
-  description = "Alternative computing, tested against present-day engineering problems."
+  description = "Writing about overlooked languages, systems, and techniques."
   email = "contact@thecodelesstaken.com"
-  tagline = "Practical lessons from overlooked languages, systems, and techniques."
+  tagline = "Writing about overlooked languages, systems, and techniques."
   github = "https://github.com/thecodelesstaken"
 
 [outputs]

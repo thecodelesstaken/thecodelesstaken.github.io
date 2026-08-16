@@ -1,67 +1,33 @@
 {{ define "main" }}
 {{ $writing := where site.RegularPages "Section" "writing" }}
-{{ $latest := first 3 $writing.ByDate.Reverse }}
-<section class="hero shell">
-  <div class="hero-copy">
-    <h1>Overlooked ideas for today’s software.</h1>
-    <p class="hero-deck">We test overlooked computing mechanisms against current engineering problems and state the conditions under which they help.</p>
-    <div class="hero-actions">
-      <a class="button button-primary" href="{{ "writing/" | relURL }}">Read the writing</a>
-    </div>
-  </div>
-</section>
+<section class="home-index shell">
+  <header class="home-intro">
+    <h1>The Code Less Taken</h1>
+    <p>Writing about overlooked languages, systems, and techniques.</p>
+  </header>
 
-{{ if $latest }}
-<section class="home-section home-latest">
-  <div class="shell">
-    <div class="home-section-heading">
-      <h2>Latest writing</h2>
+  <section class="home-writing" aria-labelledby="writing-heading">
+    <div class="home-index-heading">
+      <h2 id="writing-heading">Writing</h2>
       <a href="{{ "writing/" | relURL }}">All writing</a>
     </div>
-    {{ range first 1 $latest }}
-    <article class="featured-entry">
-      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-      {{ with .Description }}<p>{{ . }}</p>{{ end }}
-      <p class="entry-meta">
+    {{ if $writing }}
+    <ol class="home-entry-list">
+      {{ range first 6 $writing.ByDate.Reverse }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         {{ with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2 Jan 2006" }}</time>{{ end }}
-        <span>{{ .ReadingTime }} min read</span>
-      </p>
-    </article>
-    {{ end }}
-    {{ if gt (len $latest) 1 }}
-    <div class="recent-entry-grid">
-      {{ range after 1 $latest }}
-      <article>
-        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        {{ with .Description }}<p>{{ . }}</p>{{ end }}
-        <p class="entry-meta">
-          {{ with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2 Jan 2006" }}</time>{{ end }}
-          <span>{{ .ReadingTime }} min read</span>
-        </p>
-      </article>
+      </li>
       {{ end }}
-    </div>
+    </ol>
+    {{ else }}
+    <p class="empty-state">No articles published yet.</p>
     {{ end }}
-  </div>
-</section>
-{{ end }}
+  </section>
 
-<section class="home-section home-method">
-  <div class="shell home-method-grid">
-    <h2>Each post presents a focused argument and the evidence behind it.</h2>
-    <div class="home-method-copy">
-      <p>The article defines the engineering problem, explains the relevant mechanism, and compares it with a current approach.</p>
-      <p>Supporting source notes, code, benchmarks, and experiments are published separately when they affect the conclusion.</p>
-      <a href="{{ "standards/editorial/" | relURL }}">Read the editorial method</a>
-    </div>
-  </div>
-</section>
-
-<section class="contact-band">
-  <div class="shell contact-inner">
-    <h2>Worked with a system we should examine?</h2>
-    <p>Send first-hand experience, primary sources, reproduction notes, or a correction.</p>
-    <a class="button button-primary" href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
-  </div>
+  <section class="home-contact" id="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact</h2>
+    <p><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+  </section>
 </section>
 {{ end }}

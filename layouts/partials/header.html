@@ -6,8 +6,6 @@
     </a>
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="{{ "writing/" | relURL }}"{{ if eq .Section "writing" }} aria-current="page"{{ end }}>Writing</a>
-      <a href="{{ "about/" | relURL }}"{{ if eq .RelPermalink "/about/" }} aria-current="page"{{ end }}>About</a>
-      <a href="{{ "contact/" | relURL }}"{{ if eq .RelPermalink "/contact/" }} aria-current="page"{{ end }}>Contact</a>
     </nav>
     <button class="theme-toggle" type="button" data-theme-toggle aria-label="Change color mode">
       <span class="theme-dot" aria-hidden="true"></span>
