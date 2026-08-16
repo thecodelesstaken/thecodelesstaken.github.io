@@ -1,43 +1,66 @@
 {{ define "main" }}
+{{ $writing := where site.RegularPages "Section" "writing" }}
+{{ $latest := first 3 $writing.ByDate.Reverse }}
 <section class="hero shell">
   <div class="hero-copy">
-    <h1>The roads computing did not take.</h1>
-    <p class="hero-deck">Uncommon languages, forgotten systems, and alternative ideas can still sharpen how we build software. We examine how they worked, why they stayed outside the mainstream, and what remains useful now.</p>
+    <h1>Overlooked ideas for today’s software.</h1>
+    <p class="hero-deck">Each post explains one computing mechanism, tests its trade-offs, and identifies what engineers can apply, question, or reject.</p>
     <div class="hero-actions">
-      <a class="button button-primary" href="{{ "writing/" | relURL }}">Explore the writing</a>
-      <a class="button button-secondary" href="{{ "manifesto/" | relURL }}">Why this matters</a>
+      <a class="button button-primary" href="{{ "writing/" | relURL }}">Read the writing</a>
     </div>
   </div>
 </section>
 
-<section class="home-section home-writing">
+{{ if $latest }}
+<section class="home-section home-latest">
   <div class="shell">
-    <div class="home-writing-intro">
-      <h2>What you’ll find here</h2>
-      <p>Technical history is most useful when it changes how you see a present problem. The writing connects overlooked ideas to current questions in security, coordination, reliability, programming environments, and tooling.</p>
+    <div class="home-section-heading">
+      <h2>Latest writing</h2>
+      <a href="{{ "writing/" | relURL }}">All writing</a>
     </div>
-    <div class="writing-types">
-      <div>
-        <h3>Investigations</h3>
-        <p>Source-backed accounts of how a system worked, why it remained uncommon, and which of its trade-offs still matter.</p>
-      </div>
-      <div>
-        <h3>Field notes</h3>
-        <p>Shorter reports from reconstructed builds, unusual tools, important papers, protocols, and focused experiments.</p>
-      </div>
-      <div>
-        <h3>Working artifacts</h3>
-        <p>Runnable examples and documented environments for claims that can be tested, with limits and failures left visible.</p>
-      </div>
+    {{ range first 1 $latest }}
+    <article class="featured-entry">
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      <p class="entry-meta">
+        {{ with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2 Jan 2006" }}</time>{{ end }}
+        <span>{{ .ReadingTime }} min read</span>
+      </p>
+    </article>
+    {{ end }}
+    {{ if gt (len $latest) 1 }}
+    <div class="recent-entry-grid">
+      {{ range after 1 $latest }}
+      <article>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+        <p class="entry-meta">
+          {{ with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2 Jan 2006" }}</time>{{ end }}
+          <span>{{ .ReadingTime }} min read</span>
+        </p>
+      </article>
+      {{ end }}
     </div>
-    <p class="home-writing-link"><a href="{{ "writing/" | relURL }}">Browse all writing</a></p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+<section class="home-section home-method">
+  <div class="shell home-method-grid">
+    <h2>Focused posts with evidence you can inspect.</h2>
+    <div class="home-method-copy">
+      <p>The article stays focused on one engineering question and the mechanism that changes how it can be understood.</p>
+      <p>Source notes, code, benchmarks, reconstructed environments, and failed experiments remain available when they support the conclusion.</p>
+      <a href="{{ "standards/editorial/" | relURL }}">Read the editorial method</a>
+    </div>
   </div>
 </section>
 
 <section class="contact-band">
   <div class="shell contact-inner">
-    <h2>Know something we should examine?</h2>
-    <p>Send primary material, build knowledge, practitioner accounts, or a specific correction.</p>
+    <h2>Worked with a system we should examine?</h2>
+    <p>Send first-hand experience, primary sources, reproduction notes, or a correction.</p>
     <a class="button button-primary" href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
   </div>
 </section>

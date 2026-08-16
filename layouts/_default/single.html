@@ -3,7 +3,13 @@
   <header class="article-header">
     <h1>{{ .Title }}</h1>
     {{ with .Description }}<p class="standfirst">{{ . }}</p>{{ end }}
-    {{ with .Date }}<p class="article-date"><time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2 January 2006" }}</time></p>{{ end }}
+    {{ if eq .Section "writing" }}
+    <p class="article-meta">
+      {{ with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2 January 2006" }}</time>{{ end }}
+      <span>{{ .ReadingTime }} min read</span>
+      {{ with .Params.format }}<span>{{ . | humanize }}</span>{{ end }}
+    </p>
+    {{ end }}
   </header>
   <div class="prose">
     {{ .Content }}

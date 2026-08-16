@@ -3,7 +3,7 @@
   <channel>
     <title>{{ printf "%s — Writing" site.Title | transform.XMLEscape | safeHTML }}</title>
     <link>{{ "writing/" | absURL }}</link>
-    <description>{{ "New investigations and field notes on uncommon languages, forgotten systems, and alternative computing." | transform.XMLEscape | safeHTML }}</description>
+    <description>{{ "Technical posts that test overlooked computing ideas against present-day engineering problems." | transform.XMLEscape | safeHTML }}</description>
     <language>en-US</language>
     <copyright>{{ printf "© %d %s" now.Year site.Title | transform.XMLEscape | safeHTML }}</copyright>
     {{- with .OutputFormats.Get "RSS" }}

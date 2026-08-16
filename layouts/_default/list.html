@@ -9,9 +9,17 @@
   <div class="entry-list">
     {{ range .Pages.ByDate.Reverse }}
     <article class="entry">
-      <div class="entry-meta"><span>{{ .Params.format | default .Section | humanize }}</span>{{ with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2 Jan 2006" }}</time>{{ end }}</div>
-      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-      {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      <div class="entry-main">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      </div>
+      {{ if eq .Section "writing" }}
+      <div class="entry-meta">
+        {{ with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2 Jan 2006" }}</time>{{ end }}
+        <span>{{ .ReadingTime }} min read</span>
+        {{ with .Params.format }}<span>{{ . | humanize }}</span>{{ end }}
+      </div>
+      {{ end }}
     </article>
     {{ end }}
   </div>

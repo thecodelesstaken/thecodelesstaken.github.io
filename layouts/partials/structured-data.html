@@ -32,7 +32,7 @@
   "description" $description
   "inLanguage" "en-US"
   "isPartOf" (dict "@id" $websiteID)
-  "about" (dict "@type" "Thing" "name" "Alternative computing")
+  "about" (dict "@type" "Thing" "name" "Alternative computing and software engineering")
   "publisher" (dict "@id" $orgID)
 -}}
 <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice $organization $website $webpage) | jsonify | safeJS }}</script>
