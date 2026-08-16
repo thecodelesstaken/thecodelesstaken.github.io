@@ -4,8 +4,8 @@ description = "Technical posts that test overlooked computing ideas against pres
 aliases = ["/research/", "/field-notes/"]
 +++
 
-Posts are scoped to one useful claim. Each asks what an overlooked mechanism reveals about a current problem, explains how it works, and concludes where it helps and where it does not.
+Each post investigates one engineering question through an overlooked mechanism. It explains how the mechanism works, tests its trade-offs against a current approach, and states where the idea is useful.
 
-When a claim depends on implementation, its source notes, code, environment, benchmark data, and failed attempts are published separately. The post remains readable without hiding the evidence behind it.
+Supporting code, source notes, test environments, and results are published separately when the argument depends on them. The article can stand alone; readers can inspect the supporting material.
 
 New work will appear on this page and in the [RSS feed](/feed.xml).
